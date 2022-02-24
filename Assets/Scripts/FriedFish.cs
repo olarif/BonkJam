@@ -10,7 +10,8 @@ public class FriedFish : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            collision.gameObject.transform.position = spawnPoint.position;
+            collision.transform.position = GameManager.instance.lastCheckPointPos;
+            //collision.gameObject.transform.position = spawnPoint.position;
         }
     }
 }

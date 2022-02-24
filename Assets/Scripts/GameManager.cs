@@ -8,8 +8,8 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
-    public TMP_Text health;
+    public Vector2 lastCheckPointPos;
+    //public TMP_Text health;
 
     [HideInInspector] public bool chatActive = false;
 
@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        health.text = "x " + Random.Range(-10, 10);
+        //health.text = "x " + Random.Range(-10, 10);
     }
 
     void Update()

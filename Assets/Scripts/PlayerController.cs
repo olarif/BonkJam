@@ -11,8 +11,6 @@ public class PlayerController : MonoBehaviour
 {
     public ParticleSystem dust;
 
-
-
     [UnityEngine.Header("Movement")]
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
