@@ -9,8 +9,6 @@ using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
-    public ParticleSystem dust;
-
     [UnityEngine.Header("Movement")]
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
@@ -74,28 +72,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    /*
-    private void LateUpdate()
-    {
-        if (isGrounded)
-        {
-            animator.SetBool("Ground", true);
-        } else
-        {
-            animator.SetBool("Ground", false);
-        }
-
-        if (rb.velocity.magnitude > 0.1)
-        {
-            animator.SetBool("Walking", true);
-        } else
-        {
-            animator.SetBool("Walking", false);
-        }
-    }
-
-    */
-
     private void GroundCheck()
     {
         isGrounded = false;
@@ -138,7 +114,7 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetButton("Jump") && isJumping)
         {
-            if(jumpTimeCounter > 0)
+            if (jumpTimeCounter > 0)
             {
                 Jump();
                 jumpTimeCounter -= Time.deltaTime;
@@ -169,21 +145,6 @@ public class PlayerController : MonoBehaviour
 
     private void Flip() 
     {
-        /*
-
-        var mouse = new Vector2(Input.mousePosition.x, Screen.height - Input.mousePosition.y);
-        var playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
-
-        if(moveDirection > 0 || mouse.x > playerScreenPoint.x)
-        {
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
-        } else if (moveDirection < 0 || mouse.x < playerScreenPoint.x)
-        {
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
-        }
-
-        */
-
         if (moveDirection > 0)
         {
             transform.localRotation = Quaternion.Euler(0, 180, 0);
@@ -193,9 +154,15 @@ public class PlayerController : MonoBehaviour
             transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
     }
-    
-    void CreateDust()
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        dust.Play();
+        TokenWorld tokenWorld = collision.GetComponent<TokenWorld>();
+
+        if  (tokenWorld != null)
+        {
+            inventory.AddItem(tokenWorld.GetItem());
+            tokenWorld.DestroySelf();
+        }
     }
 }

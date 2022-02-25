@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public Vector2 lastCheckPointPos;
     //public TMP_Text health;
 
+    private Inventory inventory;
+
     [HideInInspector] public bool chatActive = false;
 
     private void Awake()
@@ -26,6 +28,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        inventory = new Inventory();
+
         //health.text = "x " + Random.Range(-10, 10);
     }
 

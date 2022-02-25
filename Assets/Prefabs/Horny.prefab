@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216556678158164481}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.303, y: 0.012, z: 0}
+  m_LocalPosition: {x: 0.585, y: 0.234, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1827813134133064306}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827813133236340298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.026, y: -0.2843, z: 0}
+  m_LocalPosition: {x: -0.05, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1827813134133064306}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 1827813134133064318}
   - component: {fileID: 1827813134133064307}
   - component: {fileID: 1903627571784197506}
-  - component: {fileID: 599373449204733617}
+  - component: {fileID: 253768907563251017}
   m_Layer: 0
   m_Name: Horny
   m_TagString: Player
@@ -90,7 +90,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827813134133064313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.524, y: -3.022, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 1827813133236340299}
@@ -140,7 +140,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: abdbf8e77dc3fc448a975d6e6d2269da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf533ee41cf1ad545a40d657e8f6e1d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -166,7 +166,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 2.5
   m_Material: {fileID: 6200000, guid: f278f79434a14514196cabf0e58af900, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -185,9 +185,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.008007422, y: -0.028115153}
-  m_Size: {x: 0.32970664, y: 0.5130694}
-  m_Direction: 0
+  m_Offset: {x: -0.06102179, y: -0.30423626}
+  m_Size: {x: 0.63733065, y: 0.38883}
+  m_Direction: 1
 --- !u!95 &1827813134133064307
 Animator:
   serializedVersion: 3
@@ -227,7 +227,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   damage: 10
---- !u!114 &599373449204733617
+--- !u!114 &253768907563251017
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  health: 0
+  health: 100
   maxVelocity: 0
 --- !u!1 &5307749929133045358
 GameObject:
@@ -270,8 +270,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5307749929133045358}
   m_LocalRotation: {x: 0, y: 0, z: -0.60876137, w: 0.7933534}
-  m_LocalPosition: {x: 0.176, y: 0.044, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0}
+  m_LocalPosition: {x: 0.175, y: 0.265, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0}
   m_Children: []
   m_Father: {fileID: 1827813134133064306}
   m_RootOrder: 2

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6830904676934758899}
   - component: {fileID: 6830904676934758898}
   - component: {fileID: 6830904676934758900}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visualCue: {fileID: 6830904677030026296}
-  inkJSON: {fileID: 4900000, guid: ea3db9b7dff75fc48aeebdfed21fe093, type: 3}
+  inkJSON: {fileID: 4900000, guid: 77a1d724f62d3384690c5417c319ccb2, type: 3}
 --- !u!61 &6830904676934758900
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -61,7 +61,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.016469836, y: 0.1976397}
+  m_Offset: {x: -0.016469836, y: 0.004117489}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -72,7 +72,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.675269, y: 1.8952794}
+  m_Size: {x: 0.9623916, y: 1.508235}
   m_EdgeRadius: 0
 --- !u!1 &6830904677030026296
 GameObject:
@@ -84,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6830904677030026298}
   - component: {fileID: 6830904677030026297}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 6830904677580847056}
   - component: {fileID: 6830904677580847087}
   - component: {fileID: 1394781793}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

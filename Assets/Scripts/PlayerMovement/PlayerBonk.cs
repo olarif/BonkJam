@@ -26,7 +26,8 @@ public class PlayerBonk : MonoBehaviour
 
                 for(int i = 0; i < enemiesToBonk.Length; i++)
                 {
-                    enemiesToBonk[i].GetComponent<Enemy>().TakeDamage(damage);
+                    //enemiesToBonk[i].GetComponent<Enemy>().TakeDamage(damage);
+                    enemiesToBonk[i].GetComponent<DialogueTrigger>().StartDialogue();
                 }
 
                 bonkAnim.SetTrigger("Bonk");

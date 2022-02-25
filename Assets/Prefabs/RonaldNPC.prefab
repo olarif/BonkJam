@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6830904676934758899}
   - component: {fileID: 6830904676934758898}
   - component: {fileID: 6830904676934758900}
-  m_Layer: 0
+  - component: {fileID: 656402229}
+  m_Layer: 6
   m_Name: RonaldNPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +62,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.016469836, y: 0.1976397}
+  m_Offset: {x: 0.00095546246, y: -0.2408973}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -72,8 +73,21 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.675269, y: 1.8952794}
+  m_Size: {x: 1.4671137, y: 0.90203595}
   m_EdgeRadius: 0
+--- !u!114 &656402229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6830904676934758897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f51d3ac34faedd4ab8b944ce78ace4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1000
 --- !u!1 &6830904677030026296
 GameObject:
   m_ObjectHideFlags: 0
@@ -84,7 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6830904677030026298}
   - component: {fileID: 6830904677030026297}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6830904677580847086}
   - component: {fileID: 6830904677580847056}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +197,7 @@ Transform:
   m_GameObject: {fileID: 6830904677580847085}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0}
   m_Children: []
   m_Father: {fileID: 6830904676934758899}
   m_RootOrder: 0
@@ -229,7 +243,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d4c97b7df7cf9464885ad714fe2342c9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a358a8baa792d9245be9ba0c87341fd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

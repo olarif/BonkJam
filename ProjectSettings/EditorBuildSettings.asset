@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Game.unity
+    path: Assets/Scenes/Center.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Depressed.unity
@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Hungry.unity
     guid: 04e30928e33ee6c4a8693b374be9b733
   - enabled: 1
-    path: Assets/Scenes/TopDown.unity
+    path: Assets/Scenes/Depressed.unity
     guid: cd5cc212f11219648a26c709eaa5f336
   m_configObjects: {}
