@@ -186,11 +186,11 @@ public class PlayerController : MonoBehaviour
 
         if (moveDirection > 0)
         {
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
         }
         else if (moveDirection < 0)
         {
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
     }
     
