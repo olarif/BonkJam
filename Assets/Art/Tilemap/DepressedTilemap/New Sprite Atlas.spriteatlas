@@ -44,7 +44,6 @@ SpriteAtlas:
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
-    - {fileID: -2772878345927891517, guid: fa3ff7995fce58648a393d0bed830490, type: 3}
     - {fileID: 1160070744289987618, guid: fa3ff7995fce58648a393d0bed830490, type: 3}
     - {fileID: 914304036941194100, guid: fa3ff7995fce58648a393d0bed830490, type: 3}
     - {fileID: -6047872592479489346, guid: fa3ff7995fce58648a393d0bed830490, type: 3}
@@ -74,7 +73,6 @@ SpriteAtlas:
   - {fileID: -1132591797410691880, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
   - {fileID: 3837150284913894391, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
   - {fileID: -8813675847735331286, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
-  - {fileID: -2772878345927891517, guid: fa3ff7995fce58648a393d0bed830490, type: 3}
   - {fileID: -6047872592479489346, guid: fa3ff7995fce58648a393d0bed830490, type: 3}
   - {fileID: -1046147345508821515, guid: fa3ff7995fce58648a393d0bed830490, type: 3}
   - {fileID: 1160070744289987618, guid: fa3ff7995fce58648a393d0bed830490, type: 3}
@@ -90,7 +88,6 @@ SpriteAtlas:
   - Auxiliary tiles_2
   - Auxiliary tiles_1
   - Auxiliary tiles_0
-  - DepressedTileset_4
   - DepressedTileset_1
   - DepressedTileset_0
   - DepressedTileset_3
