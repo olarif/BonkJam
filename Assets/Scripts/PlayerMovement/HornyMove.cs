@@ -47,11 +47,11 @@ public class HornyMove : MonoBehaviour
 
         if (moveInput == new Vector2(-1,0))
         {
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
         else
         {
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
         }
     }
 

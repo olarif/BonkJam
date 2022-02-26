@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class Inventory
 {
     private List<Item> itemList;
 
@@ -10,9 +10,6 @@ public class Inventory : MonoBehaviour
     {
         itemList = new List<Item>();
 
-        AddItem(new Item { itemType = Item.ItemType.HornyToken });
-
-        Debug.Log(itemList.Count);
     }
 
     public void AddItem(Item item)
