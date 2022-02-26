@@ -163,8 +163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffd708bfd2bea4848af6b66877e6e615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 9
+  moveSpeed: 6
+  jumpForce: 11
   groundCheckRadius: 0.2
   groundCheckCollider: {fileID: 1827813133236340299}
   groundLayer:
