@@ -17,12 +17,13 @@ public class Interactable : MonoBehaviour
             entryEvent = new UnityEvent();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (!hasPlayed)
         {
             if (!other.CompareTag("Player")) return;
             entryEvent.Invoke();
+            Debug.Log("Rotate");
 
             if (loop)
             {
@@ -35,7 +36,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         if (!hasPlayed)
         {

@@ -6,16 +6,9 @@ public class Gate : MonoBehaviour
 {
     Animator anim;
     
-    // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void RotateLeft()
@@ -30,6 +23,6 @@ public class Gate : MonoBehaviour
 
     public void Reset()
     {
-        
+        anim.Play("RotatingGate");
     }
 }

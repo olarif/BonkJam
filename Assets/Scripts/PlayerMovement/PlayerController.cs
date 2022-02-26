@@ -70,6 +70,15 @@ public class PlayerController : MonoBehaviour
         JumpCheck();
         Flip();
 
+
+        if (isGrounded && rb.velocity.magnitude > 0.1)
+        {
+            animator.SetBool("Walking", true);
+        }
+        else
+        {
+            animator.SetBool("Walking", false);
+        }
     }
 
     private void GroundCheck()

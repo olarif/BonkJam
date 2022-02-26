@@ -143,4 +143,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a23a5adba40ad34ead46b0c3db8c234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  entryEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  exitEvent:
+    m_PersistentCalls:
+      m_Calls: []
   partnerTeleporter: {fileID: 0}
