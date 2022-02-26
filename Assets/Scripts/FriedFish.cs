@@ -10,9 +10,9 @@ public class FriedFish : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            collision.transform.position = GameManager.instance.lastCheckPointPos;
+            //collision.transform.position = GameManager.instance.lastCheckPointPos;
             collision.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-            //collision.gameObject.transform.position = spawnPoint.position;
+            collision.gameObject.transform.position = spawnPoint.position;
         }
     }
 }

@@ -23,7 +23,6 @@ public class Interactable : MonoBehaviour
         {
             if (!other.CompareTag("Player")) return;
             entryEvent.Invoke();
-            Debug.Log("Rotate");
 
             if (loop)
             {

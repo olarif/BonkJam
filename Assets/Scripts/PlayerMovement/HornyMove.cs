@@ -14,6 +14,8 @@ public class HornyMove : MonoBehaviour
     private Vector3 mousePos;
     private Vector2 moveInput;
 
+    public Transform resetPos;
+
     private int random;
 
     private Vector2 moveAmount;
@@ -25,6 +27,11 @@ public class HornyMove : MonoBehaviour
 
         random = Random.Range(0, 3);
 
+    }
+
+    public void ResetPosition()
+    {
+        transform.position = resetPos.position;
     }
 
     private void Update() 
@@ -67,5 +74,4 @@ public class HornyMove : MonoBehaviour
     {
         rb.MovePosition(rb.position + moveAmount * Time.fixedDeltaTime);
     }
-
 }

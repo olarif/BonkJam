@@ -13,6 +13,8 @@ public class TopDownPlayer : MonoBehaviour
     public float maxVelocity;
     private Vector3 mousePos;
 
+    public Transform resetPos;
+
     private Vector2 moveAmount;
 
     private void Start()
@@ -24,6 +26,11 @@ public class TopDownPlayer : MonoBehaviour
     private void Update() 
     {
 
+    }
+
+    public void ResetPosition()
+    {
+        transform.position = resetPos.position;
     }
 
     private void FixedUpdate()

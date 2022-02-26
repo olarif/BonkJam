@@ -11,22 +11,19 @@ public class Teleporter : MonoBehaviour
     public GameObject hungryTeleporter;
     public GameObject depressedTeleporter;
 
+    public GameObject defaultTeleporter;
+
     private string mood;
 
     public UnityEvent entryHorny;
     public UnityEvent entryHungry;
     public UnityEvent entryDepressed;
-
+    public UnityEvent entryDefault;
     public UnityEvent exitEvent;
     
 
     private bool active;
     private bool inactive;
-
-    private void Start()
-    {
-        
-    }
 
     private void Update()
     {
@@ -39,28 +36,52 @@ public class Teleporter : MonoBehaviour
 
         if (collision.CompareTag("Player"))
         {
+            entryDefault.Invoke();
+
             switch (mood)
             {
                 case "Horny":
                     entryHorny.Invoke();
                     //collision.transform.position = hornyTeleporter.transform.position;
-                    //hornyTeleporter.GetComponent<Teleporter>().Inactive();
+                    if(hornyTeleporter != null)
+                    hornyTeleporter.GetComponent<Teleporter>().Inactive();
                     break;
                 case "Hungry":
-                    
-                    collision.transform.position = hungryTeleporter.transform.position;
-                    hungryTeleporter.GetComponent<Teleporter>().Inactive();
                     entryHungry.Invoke();
+                    if (hornyTeleporter != null)
+                    {
+                        collision.transform.position = hungryTeleporter.transform.position;
+                        hungryTeleporter.GetComponent<Teleporter>().Inactive();
+                    }
                     break;
                 case "Depressed":
                     entryDepressed.Invoke();
                     //collision.transform.position = hornyTeleporter.transform.position;
-                    //depressedTeleporter.GetComponent<Teleporter>().Inactive();
+                    depressedTeleporter.GetComponent<Teleporter>().Inactive();
                     break;
                 default:
-                    Debug.Log("you twat");
+                    if (defaultTeleporter == null) return;
+                    collision.transform.position = defaultTeleporter.transform.position;
+                    defaultTeleporter.GetComponent<Teleporter>().Inactive();
+                    //Debug.Log("you twat");
                     break;
             }
+
+            
+            if (defaultTeleporter != null)
+            {
+                defaultTeleporter.GetComponent<Teleporter>().Inactive();
+            }
+            if (depressedTeleporter != null)
+            {
+                depressedTeleporter.GetComponent<Teleporter>().Inactive();
+            }
+            if (hornyTeleporter != null)
+            {
+                hornyTeleporter.GetComponent<Teleporter>().Inactive();
+            }
+
+            
 
             collision.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
 
@@ -82,4 +103,6 @@ public class Teleporter : MonoBehaviour
     {
         inactive = true;
     }
+
+
 }
