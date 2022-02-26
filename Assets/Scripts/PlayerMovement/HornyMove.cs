@@ -21,7 +21,7 @@ public class HornyMove : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
 
         random = Random.Range(0, 3);
 
@@ -29,6 +29,14 @@ public class HornyMove : MonoBehaviour
 
     private void Update() 
     {
+        if (rb.velocity.magnitude > 0.1)
+        {
+            anim.SetBool("Walking", true);
+        }
+        else
+        {
+            anim.SetBool("Walking", false);
+        }
 
         switch (random)
         {

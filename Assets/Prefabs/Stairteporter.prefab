@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2714716071744179531}
   - component: {fileID: 7789559992031536112}
-  - component: {fileID: 8687598357770401697}
   - component: {fileID: 5548945306961017674}
+  - component: {fileID: 4024334875893727380}
   m_Layer: 0
   m_Name: Stairteporter
   m_TagString: Untagged
@@ -85,19 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8687598357770401697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4422644654372706537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a23a5adba40ad34ead46b0c3db8c234, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  partnerTeleporter: {fileID: 0}
 --- !u!61 &5548945306961017674
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -124,3 +111,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.524377, y: 1.5637789}
   m_EdgeRadius: 0
+--- !u!114 &4024334875893727380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4422644654372706537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3efbf58cee8d4449d6aed507618179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partnerTeleporter: {fileID: 0}
