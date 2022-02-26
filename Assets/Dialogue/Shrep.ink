@@ -1,6 +1,6 @@
 INCLUDE globals.ink
 
-Hello sir! #speaker:Shrep #portrait:shrep #layout:left
+Hello sir! #speaker:Ronald #portrait:ronald #layout:left
 { globalmood == "": You're not in a mood yet | I see you're feeling {globalmood}}
 
 { globalmood == "": -> main | -> alreadyChose }

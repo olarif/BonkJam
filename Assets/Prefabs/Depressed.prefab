@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1827813134133064319}
   - component: {fileID: 1827813134133064318}
   - component: {fileID: 3436663314117709091}
+  - component: {fileID: 3016982013359556143}
   m_Layer: 0
   m_Name: Depressed
   m_TagString: Player
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: abdbf8e77dc3fc448a975d6e6d2269da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf533ee41cf1ad545a40d657e8f6e1d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -138,3 +139,22 @@ MonoBehaviour:
   speed: 4
   health: 100
   maxVelocity: 4
+--- !u!95 &3016982013359556143
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827813134133064313}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b2c46696f67617f478e0e11a9a9e90be, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
