@@ -49,17 +49,47 @@ SpriteAtlas:
     - {fileID: 914304036941194100, guid: fa3ff7995fce58648a393d0bed830490, type: 3}
     - {fileID: -6047872592479489346, guid: fa3ff7995fce58648a393d0bed830490, type: 3}
     - {fileID: -1046147345508821515, guid: fa3ff7995fce58648a393d0bed830490, type: 3}
+    - {fileID: -8813675847735331286, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
+    - {fileID: 3837150284913894391, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
+    - {fileID: -1132591797410691880, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
+    - {fileID: -8978399827768299679, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
+    - {fileID: 2979810340618589915, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
+    - {fileID: -3240918149012066481, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
+    - {fileID: -1948305783018069012, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
+    - {fileID: -6090347947240372478, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
+    - {fileID: 3437175554393125468, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
+    - {fileID: -3844559427083262016, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: -3844559427083262016, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
+  - {fileID: 3437175554393125468, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
+  - {fileID: -6090347947240372478, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
+  - {fileID: -1948305783018069012, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
+  - {fileID: -3240918149012066481, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
+  - {fileID: 2979810340618589915, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
+  - {fileID: -8978399827768299679, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
+  - {fileID: -1132591797410691880, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
+  - {fileID: 3837150284913894391, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
+  - {fileID: -8813675847735331286, guid: 485a7d3019d17304bbc0ea0823f6c8bb, type: 3}
   - {fileID: -2772878345927891517, guid: fa3ff7995fce58648a393d0bed830490, type: 3}
   - {fileID: -6047872592479489346, guid: fa3ff7995fce58648a393d0bed830490, type: 3}
   - {fileID: -1046147345508821515, guid: fa3ff7995fce58648a393d0bed830490, type: 3}
   - {fileID: 1160070744289987618, guid: fa3ff7995fce58648a393d0bed830490, type: 3}
   - {fileID: 914304036941194100, guid: fa3ff7995fce58648a393d0bed830490, type: 3}
   m_PackedSpriteNamesToIndex:
+  - Auxiliary tiles_9
+  - Auxiliary tiles_8
+  - Auxiliary tiles_7
+  - Auxiliary tiles_6
+  - Auxiliary tiles_5
+  - Auxiliary tiles_4
+  - Auxiliary tiles_3
+  - Auxiliary tiles_2
+  - Auxiliary tiles_1
+  - Auxiliary tiles_0
   - DepressedTileset_4
   - DepressedTileset_1
   - DepressedTileset_0
