@@ -226,6 +226,9 @@ MonoBehaviour:
   enemy:
     serializedVersion: 2
     m_Bits: 64
+  eggplant:
+    serializedVersion: 2
+    m_Bits: 128
   damage: 10
 --- !u!114 &253768907563251017
 MonoBehaviour:
@@ -242,6 +245,7 @@ MonoBehaviour:
   speed: 5
   health: 100
   maxVelocity: 0
+  resetPos: {fileID: 0}
 --- !u!1 &5307749929133045358
 GameObject:
   m_ObjectHideFlags: 0

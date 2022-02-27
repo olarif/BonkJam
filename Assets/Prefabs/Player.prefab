@@ -249,6 +249,9 @@ MonoBehaviour:
   enemy:
     serializedVersion: 2
     m_Bits: 64
+  eggplant:
+    serializedVersion: 2
+    m_Bits: 128
   damage: 10
 --- !u!1 &5307749929133045358
 GameObject:

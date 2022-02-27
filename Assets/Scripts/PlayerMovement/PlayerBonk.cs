@@ -12,6 +12,7 @@ public class PlayerBonk : MonoBehaviour
     public Transform attackPos;
     public float attackRange;
     public LayerMask enemy;
+    public LayerMask eggplant;
     public int damage;
 
     private void Update()
@@ -23,15 +24,19 @@ public class PlayerBonk : MonoBehaviour
                 //FindObjectOfType<AudioManager>().Play("Bonk");
 
                 Collider2D[] enemiesToBonk = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemy);
+                Collider2D[] eggplantsToBonk = Physics2D.OverlapCircleAll(attackPos.position, attackRange, eggplant);
 
-                for(int i = 0; i < enemiesToBonk.Length; i++)
+                for (int i = 0; i < eggplantsToBonk.Length; i++)
                 {
-                    //enemiesToBonk[i].GetComponent<Enemy>().TakeDamage(damage);
+                    eggplantsToBonk[i].GetComponent<Eggplant>().Bonked();
 
+                }
+
+                for (int i = 0; i < enemiesToBonk.Length; i++)
+                {
                     if (!DialogueManager.GetInstance().isPlaying) {
                         enemiesToBonk[i].GetComponent<DialogueTrigger>().StartDialogue();
                     }
-                    
                 }
 
                 bonkAnim.SetTrigger("Bonk");

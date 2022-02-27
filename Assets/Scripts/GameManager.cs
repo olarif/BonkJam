@@ -20,6 +20,10 @@ public class GameManager : MonoBehaviour
 
     private Inventory inventory;
 
+    public bool hornyToken = false;
+    public bool hungryToken = false;
+    public bool depressedToken = false;
+
     [HideInInspector] public bool chatActive = false;
 
     private void Awake()
