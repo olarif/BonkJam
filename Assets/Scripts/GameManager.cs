@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
         instance = this;
+
+        FindObjectOfType<AudioManager>().Play("bubbles");
     }
 
     private void Start()
