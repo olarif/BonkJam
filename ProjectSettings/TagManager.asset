@@ -7,6 +7,12 @@ TagManager:
   - GameManager
   - NPC
   - Default
+  - Horny
+  - Depressed
+  - Normal
+  - Center
+  - Toxic
+  - Hungry
   layers:
   - Default
   - TransparentFX

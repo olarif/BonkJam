@@ -16,14 +16,17 @@ public class Token : MonoBehaviour
             {
                 GameManager.instance.depressedToken = true;
                 FindObjectOfType<AudioManager>().Play("successMoan");
+                Destroy(gameObject);
             } else if (hornyToken)
             {
                 GameManager.instance.hornyToken = true;
                 FindObjectOfType<AudioManager>().Play("successMoan");
+                Destroy(gameObject);
             } else if (hungryToken)
             {
                 GameManager.instance.hungryToken = true;
                 FindObjectOfType<AudioManager>().Play("successMoan");
+                Destroy(gameObject);
             }
         }
     }

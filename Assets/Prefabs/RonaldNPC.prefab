@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6830904676934758899}
   - component: {fileID: 6830904676934758898}
   - component: {fileID: 6830904676934758900}
-  - component: {fileID: 656402229}
   m_Layer: 6
   m_Name: RonaldNPC
   m_TagString: NPC
@@ -49,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualCue: {fileID: 6830904677030026296}
   inkJSON: {fileID: 4900000, guid: 2b66d23e756b3ac459a97a49c3e135ba, type: 3}
+  tokenScript: {fileID: 4900000, guid: 165131063d46dc048bbe6800af431c96, type: 3}
 --- !u!61 &6830904676934758900
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -75,19 +75,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4671137, y: 0.90203595}
   m_EdgeRadius: 0
---- !u!114 &656402229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6830904676934758897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f51d3ac34faedd4ab8b944ce78ace4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1000
 --- !u!1 &6830904677030026296
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +229,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: a358a8baa792d9245be9ba0c87341fd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

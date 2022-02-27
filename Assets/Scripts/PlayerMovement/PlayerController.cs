@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Collections;
@@ -9,7 +8,22 @@ using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
-    [UnityEngine.Header("Movement")]
+    public enum moveState{ normal, horny, depressed }
+    public moveState state;
+
+    [UnityEngine.Header("Horny Movement")]
+    private Vector2 moveAmount;
+    private Vector2 moveInput;
+    private int random;
+    public float hornySpeed;
+
+    [UnityEngine.Header("Depressed Movement")]
+    public float depressedSpeed;
+    public float maxVelocity;
+    private Vector3 mousePos;
+
+    [UnityEngine.Header("Normal Movement")]
+    public float gravity = 2.5f;
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
     private float moveDirection;
@@ -35,25 +49,15 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator animator;
-    private Inventory inventory;
 
     private void Start()
     {
         animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
-    }
 
-    private void FixedUpdate()
-    {
-        if (!canMove) return;
+        random = Random.Range(0, 3);
 
-        GroundCheck();
-        Move();
-    }
-
-    private void Awake()
-    {
-        inventory = new Inventory();
+        state = moveState.normal;
     }
 
     private void Update()
@@ -63,14 +67,40 @@ public class PlayerController : MonoBehaviour
 
         if (!canMove)
         {
-            rb.velocity = new Vector2(0, -moveSpeed);
+            rb.velocity = new Vector2(0, 0);
             return;
         }
 
-        JumpCheck();
+        if (state == moveState.normal)
+        {
+            JumpCheck();
+            GroundCheck();
+        }
+        
         Flip();
+    }
 
+    private void FixedUpdate()
+    {
+        if (!canMove) return;
 
+        switch (state)
+        {
+            case moveState.normal:
+                NormalMove();
+                break;
+            case moveState.horny:
+                HornyMove();
+                break;
+            case moveState.depressed:
+                DepressedMove();
+                break;
+        }
+
+    }
+
+    private void LateUpdate()
+    {
         if (isGrounded && rb.velocity.magnitude > 0.1)
         {
             animator.SetBool("Walking", true);
@@ -145,11 +175,48 @@ public class PlayerController : MonoBehaviour
         rb.velocity = Vector2.up * jumpForce;
     }
     
-    private void Move()
+    private void NormalMove()
     {
+        rb.gravityScale = gravity;
         moveDirection = Input.GetAxisRaw("Horizontal");
-
         rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
+    }
+
+    private void HornyMove()
+    {
+        rb.gravityScale = 0f;
+        switch (random)
+        {
+            case 0:
+                moveInput = new Vector2(-Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+                break;
+            case 1:
+                moveInput = new Vector2(-Input.GetAxisRaw("Horizontal"), -Input.GetAxisRaw("Vertical"));
+                break;
+            case 2:
+                moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), -Input.GetAxisRaw("Vertical"));
+                break;
+        }
+
+        moveAmount = moveInput.normalized * hornySpeed;
+        rb.MovePosition(rb.position + moveAmount * Time.fixedDeltaTime);
+    }
+
+    private void DepressedMove()
+    {
+        rb.gravityScale = 0f;
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        var mouseDir = mousePos - gameObject.transform.position;
+        mouseDir.z = 0;
+        mouseDir = mouseDir.normalized;
+
+        rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxVelocity);
+        rb.AddForce(mouseDir * depressedSpeed);
+    }
+
+    public void SetState(moveState newState)
+    {
+        state = newState;
     }
 
     private void Flip() 
@@ -161,17 +228,6 @@ public class PlayerController : MonoBehaviour
         else if (moveDirection < 0)
         {
             transform.localRotation = Quaternion.Euler(0, 0, 0);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        TokenWorld tokenWorld = collision.GetComponent<TokenWorld>();
-
-        if  (tokenWorld != null)
-        {
-            inventory.AddItem(tokenWorld.GetItem());
-            tokenWorld.DestroySelf();
         }
     }
 }

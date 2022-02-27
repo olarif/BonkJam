@@ -12,13 +12,11 @@ public class GameManager : MonoBehaviour
     public Vector2 lastCheckPointPos;
     //public TMP_Text health;
 
-    private CinemachineVirtualCamera centerCam;
-    private CinemachineVirtualCamera toxicCam;
-    private CinemachineVirtualCamera hungryCam;
-    private CinemachineVirtualCamera hornyCam;
-    private CinemachineVirtualCamera depressedCam;
-
-    private Inventory inventory;
+    public GameObject centerCam;
+    public GameObject toxicCam;
+    public GameObject hornyCam;
+    public GameObject hungryCam;
+    public GameObject depressedCam;
 
     public bool allCollected = false;
 
@@ -37,29 +35,58 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
         instance = this;
-
-        FindObjectOfType<AudioManager>().Play("bubbles");
     }
+
 
     private void Start()
     {
-        inventory = new Inventory();
-
-        if(hornyToken && hungryToken && depressedToken)
+        if (hornyToken && hungryToken && depressedToken)
         {
             allCollected = true;
         }
-
-        //health.text = "x " + Random.Range(-10, 10);
-    }
-    
-    public void ResetMood()
-    {
-        ((Ink.Runtime.StringValue)DialogueManager.GetInstance().GetVariableState("globalmood")).value = "";
     }
 
-    void Update()
+    private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Menu");
+        }
+    }
+
+    public void SwitchCam(string cam)
+    {
+        switch (cam)
+        {
+            case "Center":
+                DisableCams();
+                centerCam.SetActive(true);
+                break;
+            case "Toxic":
+                DisableCams();
+                toxicCam.SetActive(true);
+                break;
+            case "Horny":
+                DisableCams();
+                hornyCam.SetActive(true);
+                break;
+            case "Hungry":
+                DisableCams();
+                hungryCam.SetActive(true);
+                break;
+            case "Depressed":
+                DisableCams();
+                depressedCam.SetActive(true);
+                break;
+        }
+    }
+
+    private void DisableCams()
+    {
+        centerCam.SetActive(false);
+        toxicCam.SetActive(false);
+        hornyCam.SetActive(false);
+        depressedCam.SetActive(false);
+        hungryCam.SetActive(false);
     }
 }
