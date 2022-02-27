@@ -103,6 +103,7 @@ Would you like to feel something different?
 
 
 === choseHorny ===
+~ globalmood = "Horny"
 Oh, I see you’re feeling horny.#speaker:Ronald #portrait:ronald #layout:left
 I could help you with if you want.
 
@@ -118,11 +119,13 @@ You’ll recognise it through its characteristic white sap.
 ->END
 
 === choseHungry ===
+~ globalmood = "Hungry"
 Ah, hungry, this one’s easy, just don’t go through the bottom right portal and you’ll be fine. #speaker:Ronald #portrait:ronald #layout:left
 And make sure that counter in the top left doesn’t go below zero.
 ->END
 
 === choseDepression ===
+~ globalmood = "Depressed"
 Ah, so you’re depressed, that sucks, I hope you feel better soon.#speaker:Ronald #portrait:ronald #layout:left
 
 But, I’m not? #speaker:Shrep #portrait:shrep #layout:left

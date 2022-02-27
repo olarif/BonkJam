@@ -19,21 +19,25 @@ public class Eggplant : MonoBehaviour
         if (greenEggplant && manager.bonks == 1)
         {
             this.gameObject.SetActive(false);
+            FindObjectOfType<AudioManager>().Play("successMoan");
         }
 
         if (whiteEggplant && manager.bonks == 2)
         {
             this.gameObject.SetActive(false);
+            FindObjectOfType<AudioManager>().Play("successMoan");
         }
 
         if (PurpleEggplant && manager.bonks == 3)
         {
             this.gameObject.SetActive(false);
+            FindObjectOfType<AudioManager>().Play("tokenMoan");
             manager.Done();
         }
 
         if ((greenEggplant && manager.bonks != 1) || (whiteEggplant && manager.bonks != 2) || (PurpleEggplant && manager.bonks != 3))
         {
+            FindObjectOfType<AudioManager>().Play("failMoan");
             manager.bonks = 0;
             manager.Reset();
         }

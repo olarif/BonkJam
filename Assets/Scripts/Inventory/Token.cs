@@ -15,12 +15,15 @@ public class Token : MonoBehaviour
             if (depressedToken)
             {
                 GameManager.instance.depressedToken = true;
+                FindObjectOfType<AudioManager>().Play("successMoan");
             } else if (hornyToken)
             {
                 GameManager.instance.hornyToken = true;
+                FindObjectOfType<AudioManager>().Play("successMoan");
             } else if (hungryToken)
             {
                 GameManager.instance.hungryToken = true;
+                FindObjectOfType<AudioManager>().Play("successMoan");
             }
         }
     }
