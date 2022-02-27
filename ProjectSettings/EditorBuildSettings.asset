@@ -6,21 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Center.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Menu.unity
+    guid: 58840c6dae9050940afeb8cda98b049b
   - enabled: 1
-    path: Assets/Scenes/Depressed.unity
-    guid: 46fccee67b2c1c04bad05b7814cd6b0e
-  - enabled: 1
-    path: Assets/Scenes/Fishe.unity
-    guid: e85118e33b56c7c44b79916d4f2191a0
-  - enabled: 1
-    path: Assets/Scenes/Horny.unity
-    guid: f76f0fe3953d40a40b64005cc4ed00c8
-  - enabled: 1
-    path: Assets/Scenes/Hungry.unity
-    guid: 04e30928e33ee6c4a8693b374be9b733
-  - enabled: 1
-    path: Assets/Scenes/Depressed.unity
-    guid: cd5cc212f11219648a26c709eaa5f336
+    path: Assets/Scenes/MegaScene.unity
+    guid: 257d56c354ec13e4ab5cd4bd6d9e2e0d
   m_configObjects: {}
