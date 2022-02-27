@@ -10,11 +10,19 @@ public class DialogueTrigger : MonoBehaviour
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
 
+    public TextAsset tokenScript;
+
     private bool playerInRange;
 
     public void StartDialogue()
     {
-        DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+        if (GameManager.instance.allCollected)
+        {
+            DialogueManager.GetInstance().EnterDialogueMode(tokenScript);
+        } else
+        {
+            DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+        }
     }
 
     private void Update()
@@ -23,11 +31,22 @@ public class DialogueTrigger : MonoBehaviour
         {
             visualCue.SetActive(true);
 
+            /*
 
             if (!DialogueManager.GetInstance().isPlaying && Input.GetKeyDown(KeyCode.E))
             {
-                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+
+                if (GameManager.instance.allCollected)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(tokenScript);
+                } else
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                }
+                
             }
+
+            */
         }
         else
         {

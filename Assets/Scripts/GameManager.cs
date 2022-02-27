@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     private Inventory inventory;
 
+    public bool allCollected = false;
+
     public bool hornyToken = false;
     public bool hungryToken = false;
     public bool depressedToken = false;
@@ -40,6 +42,11 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         inventory = new Inventory();
+
+        if(hornyToken && hungryToken && depressedToken)
+        {
+            allCollected = true;
+        }
 
         //health.text = "x " + Random.Range(-10, 10);
     }

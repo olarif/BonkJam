@@ -29,7 +29,6 @@ public class PlayerBonk : MonoBehaviour
                 for (int i = 0; i < eggplantsToBonk.Length; i++)
                 {
                     eggplantsToBonk[i].GetComponent<Eggplant>().Bonked();
-
                 }
 
                 for (int i = 0; i < enemiesToBonk.Length; i++)
